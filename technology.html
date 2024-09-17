@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/technolegy.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header__logo logo">
+            <a href="/index.html" class="logo__img">
+            <img src="assets/shared/logo.svg" alt="">
+            </a>
+            <div class="line"></div>
+        </div>
+        <!-- navbar -->
+        <nav class="header__nav nav">
+            <a href="/index.html" class="nav__item"><span>00</span> HOME</a>
+            <a href="/destinations.html" class="nav__item"><span>01</span> DESTINATION</a>
+            <a href="/crew.html" class="nav__item"><span>02</span> CREW</a>
+            <a href="/technology.html" class="nav__item"><span>03</span> TECHNOLOGY</a>
+        </nav>
+    </header>
+    <!-- container -->
+    <div class="container">
+        <div class="container__content content">
+            <div class="content__title">
+                <h1><span>03</span> SPACE LAUNCH 101</h1>
+                <div>
+                    <a href="/crew.html" class="previous round">&#8249;</a>
+                </div>
+            </div>
+            <!-- container technology -->
+            <div class="container__technology technology">
+                <div class="technology__info">
+                    <div class="technology__info-hero hero">
+                        <div class="hero__info info">
+                            <h2 id="info-title">THE TERMINOLOGY…</h2>
+                            <h1 id="info-name">launch vehicle</h1>
+                        </div>
+                        <div class="hero__desc">
+                            <p id="technology-desc">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+                        </div>
+                    </div>
+                    <!-- buttons -->
+                    <div class="technology__info-button button">
+                        <button class="button-btn active" onclick="swichTechnology(0)">1</button>
+                        <button class="button-btn" onclick="swichTechnology(1)">2</button>
+                        <button class="button-btn" onclick="swichTechnology(2)">3</button>
+                    </div>
+                </div>
+                <!-- images -->
+                <div class="technology__images">
+                    <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt="" class="technology__images-rocket" id="rocket-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

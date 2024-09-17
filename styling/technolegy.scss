@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --blue-300: hsl(231, 77%, 90%);
+    --blue-900: hsl(230, 35%, 7%)
+  }
+  
+  body {
+    background-image: url('../assets/technology/background-technology-desktop.jpg');
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 64px;
+  
+    &__logo {
+      width: 582px;
+      height: 48px;
+      margin-top: 40px;
+      margin-left: 8px;
+      display: flex;
+    }
+  
+    .logo__img {
+      height: 48px;
+      width: 48px;
+    }
+  
+    &__nav {
+      margin-top: 40px;
+      display: flex;
+      gap: 48px;
+      background-color: transparent;
+      backdrop-filter: blur(20px);
+       width: 960px;
+      height: 96px;
+      justify-content: center;
+    
+      .nav__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 19.2%;
+        width: 118px;
+        list-style-type: none;
+        text-decoration: none;
+        position: relative;
+    
+        span {
+          margin-right: 10px;
+          font-weight: 500;
+        }
+    
+        // Add the underline effect on hover
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%; /* Center horizontally */
+          bottom: 0;
+          width: 0%; /* Initially, set to 0 */
+          transform: translateX(-50%); /* Adjust to keep centered */
+          height: 2px;
+          background-color: white;
+          transition: width 0.3s ease-in-out;
+        }
+    
+        &:hover::after {
+          width: 80%; /* Expand to 80% of the element width to avoid the gap */
+        }
+      }
+    }
+    
+  }
+
+  .line {
+    position: absolute;
+    left: 9%;
+    border: 0;
+    border-bottom: 1px solid hsl(230, 9%, 25%);
+    width: 756px;
+    margin-left: 64px;
+    margin-top: 23.5px;
+    margin-bottom: 23.5px;
+}
+
+.container {
+    color: white;
+    overflow: hidden;
+    height: 832px;
+
+    &__content {
+        margin: 48px 165px;
+
+        .content__title {
+          display: flex;
+          justify-content: space-between;
+        
+        h1 {
+            font-size: 28px;
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 4px;
+        }
+
+        span {
+            color: gray;
+        }
+        a {
+          text-decoration: none;
+          display: inline-block;
+          padding: 8px 16px;
+          
+          &:hover {
+            background-color: #ddd;
+            color: black;
+          }
+        }
+        
+        .previous {
+          background-color: #f1f1f1;
+          color: black;
+        }
+        
+        .round {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &__technology {
+        height: 100%;
+        display: flex;
+        gap: 32px;
+        flex-direction: row;
+        
+        .technology__info {
+            width: 50%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .technology__info-hero {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                justify-content: center;
+                align-items: center;
+                // overflow: hidden;
+
+                .hero__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 650px;
+                  
+                    h2 {
+                      font-weight: 300;
+                      font-size: 32px;
+                      text-transform: uppercase;
+                      color: gray;
+                    }
+                  
+                    h1 {
+                      font-size: 56px;
+                      font-weight: 400;
+                      color: white;
+                      text-transform: uppercase;
+                      margin: 16px 0;
+                    }
+                  }
+                  
+                    
+                
+                .hero__desc {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 70%;
+                    height: 130px;
+                    color: var(--blue-300);
+                    font-size: 18px;
+                    line-height: 180%;
+                }
+            }
+
+            .technology__info-button {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 50px;
+                height: 100%;
+                
+
+                .button-btn {
+                    background-color: transparent;
+                    border: 1px solid gray;
+                    color: white;
+                    height: 80px;  
+                    width: 80px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.3s ease;  
+                    font-family: "Bellefair", sans-serif;
+                    font-size: 32px;
+                    line-height: 36.7px;
+
+                    &:hover,
+                    &.active {
+                        background-color: white;
+                        color: black;
+                        transform: scale(1.1);
+                    }
+            }
+        }
+    }
+}
+
+    .technology__images {
+      position: relative;
+      top: 10px;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .technology__images-rocket  {
+        height: 700px;
+    }
+}
+
+

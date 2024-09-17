@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+.section {
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: none; /* Hide all sections by default */
+}
+
+.section.visible {
+    display: block; /* Show only the visible section */
+}
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+    <div id="section1" class="section">
+        <h1>Section 1</h1>
+        <p>This is section 1 content.</p>
+    </div>
+    <div id="section2" class="section hidden">
+        <h1>Section 2</h1>
+        <p>This is section 2 content.</p>
+    </div>
+    <div id="section3" class="section hidden">
+        <h1>Section 3</h1>
+        <p>This is section 3 content.</p>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    function showSection(sectionId) {
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            showSection(targetId);
+            document.querySelector(`#${targetId}`).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Show the first section by default
+    if (sections.length > 0) {
+        showSection(sections[0].id);
+    }
+});
+
+    </script>
+</body>
+</html>

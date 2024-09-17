@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/destinations.css">
+  
+  <title>Destinations</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <!-- logo -->
+    <div class="header__logo logo">
+      <a href="/index.html" class="logo__img">
+        <img src="assets/shared/logo.svg" alt="">
+      </a>
+      <div class="line"></div>
+    </div>
+    <!-- navbar -->
+    <nav class="header__nav nav">
+      <a href="/index.html" class="nav__item"><span>00</span> HOME</a>
+      <a href="/destinations.html" class="nav__item"><span>01</span> DESTINATION</a>
+      <a href="/crew.html" class="nav__item"><span>02</span> CREW</a>
+      <a href="/technology.html" class="nav__item"><span>03</span> TECHNOLOGY</a>
+    </nav>
+  </header>
+  <!-- container -->
+  <div class="container">
+    <div class="container__content content">
+      <div class="content__title">
+        <h1><span>01</span> PICK YOUR DESTINATION</h1>
+        <div>
+          <a href="/index.html" class="previous round">&#8249;</a>
+          <a href="/crew.html" class="next round">&#8250;</a>
+        </div>
+      </div>
+      <!-- container destination -->
+      <div class="container__destination destination">
+        <!-- left side -->
+        <div class="destination__left">
+          <img src="assets/destination/image-moon.png" alt="" class="destination__left-img">
+        </div>
+        <!-- right side -->
+        <div class="destination__right right">
+          <div class="right__explanation">
+            <!-- Destination list -->
+            <ul class="destination__list">
+              <li onclick="switchDestination(0)" class="destination__list-planet active">Moon</li>
+              <li onclick="switchDestination(1)" class="destination__list-planet">Mars</li>
+              <li onclick="switchDestination(2)" class="destination__list-planet">Europa</li>
+              <li onclick="switchDestination(3)" class="destination__list-planet">Titan</li>
+            </ul>
+        
+            <!-- Destination details -->
+            <div class="right__explanation-desc text">
+              <h1 class="text__title">Moon</h1>
+              <p class="text__desc">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites</p>
+            </div>
+        
+            <div class="white-line"></div>
+        
+            <!-- Distance and Travel Time -->
+            <div class="right__explanation-status status">
+              <div class="status__distance">
+                <p class="status__distance-title">Avg. Distance</p>
+                <h2 class="status__distance-length">384,400 km</h2>
+              </div>
+              <div class="status__travel">
+                <p class="status__travel-title">Est. Travel Time</p>
+                <h2 class="status__travel-time">3 days</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="js/main.js"></script>
+</body>
+</html>
