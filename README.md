@@ -15,8 +15,3 @@
 ## todo
 - **CSS**; Making responsive
   
-
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/B078/earth-data-fetcher.git
