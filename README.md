@@ -1,4 +1,4 @@
-# Earth Data Fetcher
+# Earth Data Fetcher| Frontend Mentor Challenge
 
 **Earth Data Fetcher** is a web application designed to dynamically retrieve and display environmental and geographical information from a local JSON file. This tool is perfect for visualizing data related to Earth's conditions in a user-friendly and interactive way.
 
