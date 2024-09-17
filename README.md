@@ -12,7 +12,11 @@
 - **SCSS/CSS**: For styling and ensuring a responsive design.
 - **HTML**: For the structure of the webpage.
 
+## todo
+- **CSS**; Making responsive
+  
+
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/earth-data-fetcher.git
+   git clone https://github.com/B078/earth-data-fetcher.git
